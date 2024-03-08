@@ -1,0 +1,11 @@
+<mat-form-field>
+    <input matInput [formControl]="myControl" placeholder="Choose an option" />
+    <mat-autocomplete>
+      <mat-optgroup *ngFor="let group of filteredOptions | async" [label]="group.group">
+        <mat-option *ngFor="let option of group.values" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
+  

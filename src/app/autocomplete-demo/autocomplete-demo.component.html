@@ -1,0 +1,20 @@
+<mat-form-field>
+    <input matInput [formControl]="myControl" placeholder="Choose an option" />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput [formControl]="myControl" placeholder="Choose an option" />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  
+  <button mat-raised-button color="primary" (click)="selectFirstOption()">Select First Option</button>
+  

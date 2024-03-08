@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Input Confirmation</h2>
+<div mat-dialog-content>{{ data.message }}</div>
+<mat-form-field>
+  <input matInput placeholder="Comment" [(ngModel)]="userComment">
+</mat-form-field>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button color="primary" (click)="onConfirmClick()">Okay</button>
+</div>

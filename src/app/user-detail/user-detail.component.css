@@ -1,0 +1,28 @@
+
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f8f9fa; /* Light gray background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  }
+  
+  h2 {
+    color: #007bff; /* Bootstrap primary color for headings */
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Optional: Add a border to the container */
+  .container {
+    border: 1px solid #ced4da; /* Bootstrap border color */
+  }
+  

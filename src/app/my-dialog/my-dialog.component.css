@@ -1,0 +1,13 @@
+button.mat-button {
+    background-color: #4CAF50; /* Set button background color */
+    color: white; /* Set button text color */
+    font-size: 16px; /* Set button font size */
+    padding: 10px 20px; /* Set button padding */
+    cursor: pointer; /* Add pointer cursor on hover */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+  }
+  
+  button.mat-button:hover {
+    background-color: #45a049; /* Change button background color on hover */
+  }

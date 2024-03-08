@@ -1,0 +1,106 @@
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="my-form">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" formControlName="firstName" class="form-control">
+    <div *ngIf="myForm.get('firstName')?.hasError('required') && myForm.get('firstName')?.touched" class="error-message">
+      First Name is required.
+    </div>
+    <div *ngIf="myForm.get('firstName')?.hasError('minlength') && myForm.get('firstName')?.touched" class="error-message">
+      First Name must be at least 2 characters long.
+    </div>
+    <div *ngIf="myForm.get('firstName')?.hasError('pattern') && myForm.get('firstName')?.touched" class="error-message">
+      Only alphabetic characters are allowed.
+    </div>
+  </div>
+  
+
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" formControlName="lastName" class="form-control">
+    <div *ngIf="myForm.get('lastName')?.hasError('required') && myForm.get('lastName')?.touched" class="error-message">
+      Last Name is required.
+    </div>
+    <div *ngIf="myForm.get('lastName')?.hasError('minlength') && myForm.get('lastName')?.touched" class="error-message">
+      Last Name must be at least 2 characters long.
+    </div>
+    <div *ngIf="myForm.get('lastName')?.hasError('pattern') && myForm.get('lastName')?.touched" class="error-message">
+      Only alphabetic characters are allowed.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="tel" id="mobileNumber" formControlName="mobileNumber" class="form-control">
+    <div *ngIf="myForm.get('mobileNumber')?.hasError('required') && myForm.get('mobileNumber')?.touched" class="error-message">
+      Mobile Number is required.
+    </div>
+    <div *ngIf="myForm.get('mobileNumber')?.hasError('pattern') && myForm.get('mobileNumber')?.touched" class="error-message">
+      Please enter a valid mobile number.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address:</label>
+    <input type="text" id="address" formControlName="address" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="pinCode">Pin Code:</label>
+    <input type="tel" id="pinCode" formControlName="pinCode" class="form-control">
+    <div *ngIf="myForm.get('pinCode')?.hasError('required') && myForm.get('pinCode')?.touched" class="error-message">
+      Pin Code is required.
+    </div>
+    <div *ngIf="myForm.get('pinCode')?.hasError('pattern') && myForm.get('pinCode')?.touched" class="error-message">
+      Pin Code must be a numeric value and between 4 to 6 characters long.
+    </div>
+    <div *ngIf="myForm.get('pinCode')?.hasError('maxLength') && myForm.get('pinCode')?.touched" class="error-message">
+      Pin Code must not exceed 6 characters.
+    </div>
+  </div>
+  
+
+  <!-- <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email" class="form-control">
+    <div *ngIf="myForm.get('email')?.hasError('required') && myForm.get('email')?.touched" class="error-message">
+      Email is required.
+    </div>
+    <div *ngIf="myForm.get('email')?.hasError('email') && myForm.get('email')?.touched" class="error-message">
+      Please enter a valid email address.
+    </div>
+  </div> -->
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email" class="form-control">
+    <div *ngIf="myForm.get('email')?.hasError('required') && myForm.get('email')?.touched" class="error-message">
+      Email is required.
+    </div>
+    <div *ngIf="myForm.get('email')?.hasError('invalidEmail') && myForm.get('email')?.touched" class="error-message">
+      Please enter a valid email address.
+    </div>
+  </div>
+  
+  
+
+  <div class="form-group">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" formControlName="dob" class="form-control">
+    <div *ngIf="myForm.get('dob')?.hasError('required') && myForm.get('dob')?.touched" class="error-message">
+      Date of Birth is required.
+    </div>
+    <div *ngIf="myForm.get('dob')?.hasError('isInvalidDate') && myForm.get('dob')?.touched" class="error-message">
+      Please enter a valid date of birth.
+    </div>
+    <div *ngIf="myForm.get('dob')?.hasError('isUnderage') && myForm.get('dob')?.touched" class="error-message">
+      Date of Birth must indicate the person is at least 18 years old.
+    </div>
+  </div>
+  
+  
+
+  <button type="submit" [disabled]="myForm.invalid || myForm.pristine" class="submit-button">Submit</button>
+</form>
+
+

@@ -1,0 +1,37 @@
+
+<!-- <div>
+    <h2>OnPush Change Detection</h2>
+    <p appHighlight>News Title: {{ bulletin.news_title | wraptext:20 }}</p>
+    <p>News Date: {{ bulletin.news_date | formatDate:'short-date'  }}</p>
+    <button (click)="changeDetectionOnPush()">Change Detection OnPush</button>
+  </div>
+  
+  <div>
+    <h2>Default Change Detection</h2>
+    <p appHighlight>News Title: {{ bulletin.news_title }}</p>
+    <p>News Date: {{ bulletin.news_date | formatDate:'short-time' }}</p>
+    <button (click)="changeDetectionDefault()">Change Detection Default</button>
+  </div>
+   -->
+  
+   <div>
+    <h2>OnPush Change Detection</h2>
+    <p appHighlight>News Title: {{ bulletin.news_title | wraptext:20 }}</p>
+    <!-- Use the formatDate pipe to format the current date as short-date -->
+    <p>News Date: {{ bulletin.news_date | formatDate:'short-date' }}</p>
+    <!-- Use the formatDate pipe to format the current time as short-time -->
+    <p>Current Time: {{ bulletin.news_date | formatDate:'short-time' }}</p>
+    <button (click)="changeDetectionOnPush()">Change Detection OnPush</button>
+  </div>
+  
+  <div>
+    <h2>Default Change Detection</h2>
+    <p appHighlight>News Title: {{ bulletin.news_title | wraptext:20 }}</p>
+    <!-- Use the formatDate pipe to format the current date as short-date -->
+    <p>News Date: {{ bulletin.news_date | formatDate:'short-date' }}</p>
+    <!-- Use the formatDate pipe to format the current time as short-time -->
+    <p>Current Time: {{ bulletin.news_date | formatDate:'short-time' }}</p>
+    <button (click)="changeDetectionDefault()">Change Detection Default</button>
+  </div>
+  
+  

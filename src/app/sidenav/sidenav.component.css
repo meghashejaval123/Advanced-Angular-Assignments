@@ -1,0 +1,26 @@
+/* sidenav.component.css */
+.sidenav-container {
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    width: 200px; /* Set the width of the sidenav */
+  }
+  
+  mat-sidenav-content {
+    padding: 16px; /* Add padding to the main content */
+  }
+  
+  mat-nav-list a {
+    text-decoration: none; /* Remove underline from the links */
+    color: #333; /* Set the color of the links */
+  }
+  
+  mat-nav-list a:hover {
+    background-color:pink; /* Change background color on hover for links */
+  }
+  
+  mat-icon {
+    margin-right: 8px; /* Add margin to the right of the menu icon */
+  }
+  

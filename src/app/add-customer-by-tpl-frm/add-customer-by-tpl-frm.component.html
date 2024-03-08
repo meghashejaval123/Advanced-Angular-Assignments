@@ -1,0 +1,91 @@
+   
+    <div *ngIf="successMessageVisible" class="success-message">
+        Customer details saved successfully!
+    </div>
+
+    <div class="error-message" *ngIf="errorMessageVisible" class="toast-message">
+        Failed to save customer details. Please try again.
+      </div>
+
+   <form #customerForm="ngForm"  (ngSubmit)="onSubmit(customerForm)" class="customer-form">
+
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required pattern="[a-zA-Z ]*">
+      <div *ngIf="!firstName" class="error-message">
+        First Name is required.
+      </div>
+      <div *ngIf="firstName && firstName.match('[^a-zA-Z ]')">
+        Invalid characters in First Name.
+      </div>
+    </div>
+  
+    <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" pattern="[a-zA-Z ]*">
+        <div *ngIf="!lastName" class="error-message">
+            Last Name is required.
+          </div>
+        <div *ngIf="lastName && lastName.match('[^a-zA-Z ]')" class="error-message">
+          Invalid characters in Last Name.
+        </div>
+      </div>
+
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <div *ngIf="customerForm.controls['email']?.hasError('pattern') && customerForm.controls['email'].touched" class="error-message">
+          Please enter a valid email address.
+        </div>
+        
+      </div>
+      
+      
+    
+      <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" [(ngModel)]="dob" required (change)="calculateAge()">
+        <div *ngIf="!dob" class="error-message">
+          Date of Birth is required.
+        </div>
+        <div *ngIf="dob && isUnderage()">
+          Customer should be above 18 years old.
+        </div>
+      </div>
+      
+      <div>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" [(ngModel)]="mobile" pattern="[0-9]{10}">
+        <div *ngIf="mobile && !mobile.match('[0-9]{10}')">
+          Invalid mobile number (should be 10 digits).
+        </div>
+      </div>
+    
+      <div>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" [(ngModel)]="address"></textarea>
+      </div>
+
+      <div>
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" [(ngModel)]="pincode" required pattern="[0-9]{6}">
+        <div *ngIf="!pincode" class="error-message">
+          Pincode is required.
+        </div>
+        <div *ngIf="pincode && !pincode.match('[0-9]{6}')">
+          Invalid pincode (should be 6 digits).
+        </div>
+      </div>
+    
+      <div>
+   
+
+  
+    <div>
+      <button type="submit" [disabled]="customerForm.form.valid">Submit</button>
+      <button type="submit" [disabled]="!customerForm.form.valid">Submit</button>
+    </div>
+
+</div>
+  </form> 

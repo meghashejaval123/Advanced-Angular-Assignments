@@ -1,0 +1,65 @@
+/* src/app/table-demo/table-demo.component.css */
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.example-table {
+  width: 100%;
+}
+
+.example-element-row {
+  cursor: pointer;
+  height: 48px;
+}
+
+.example-expanded-row {
+  background-color: #f5f5f5;
+}
+
+.example-element-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+.example-element-description {
+  font-size: 14px;
+}
+
+/* Animation for expanding/collapsing rows */
+@keyframes expand {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes collapse {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+.example-element-row {
+  transition: background-color 0.3s;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  animation: expand 0.3s ease-out;
+}
+
+.example-expanded-row .example-element-detail {
+  animation: collapse 0.3s ease-in;
+}
