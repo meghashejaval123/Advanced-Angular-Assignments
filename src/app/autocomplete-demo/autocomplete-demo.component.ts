@@ -28,7 +28,7 @@ export class AutocompleteDemoComponent {
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
     const filteredOptions = this.options.filter((option) => option.toLowerCase().includes(filterValue));
-    console.log(filteredOptions); // Add this line for debugging
+    console.log(filteredOptions);
     return filteredOptions;
   }
 

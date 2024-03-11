@@ -18,7 +18,6 @@ export class AddCustomerByTplFrmComponent implements OnInit {
   customerForm: FormGroup;
   lastName: string = '';
   email: string = '';
-  // dob: Date | undefined;
   mobile: string = '';
   address: string = '';
   pincode: string = '';
@@ -33,7 +32,7 @@ export class AddCustomerByTplFrmComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       lastName: ['', [Validators.pattern('[a-zA-Z ]*')]],
       email: ['', [Validators.required, Validators.email]],
-      dob: ['', [Validators.required]], // You may add custom validation for age here
+      dob: ['', [Validators.required]], 
       mobile: ['', [Validators.pattern('[0-9]{10}')]],
       address: [''],
       pincode: ['', [Validators.required, Validators.pattern('[0-9]{6}')]],
@@ -55,15 +54,10 @@ export class AddCustomerByTplFrmComponent implements OnInit {
     }
   }
 
-  // Email validation
-  // validateEmailPattern() {
-  //   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  //   this.emailPatternError = !emailRegex.test(this.email);
-  // }
-
-  onSubmit(customerForm: NgForm) {
-    console.log('Form Values:', customerForm.value);
-    console.log('Is Form Valid?', customerForm.valid);
+   
+    onSubmit(customerForm: NgForm) {
+     console.log('Form Values:', customerForm.value);
+     console.log('Is Form Valid?', customerForm.valid);
      if (customerForm.valid) {
       const customerDetails = {
         firstName: this.firstName,
@@ -80,21 +74,21 @@ export class AddCustomerByTplFrmComponent implements OnInit {
   
         setTimeout(() => {
           this.successMessageVisible = false;
-        }, 3000); // Adjust the duration as needed
+        }, 3000); 
       } else {
         this.errorMessageVisible = true;
   
         setTimeout(() => {
           this.errorMessageVisible = false;
-        }, 3000); // Adjust the duration as needed
+        }, 3000); 
   
         console.log('Failed to save customer details.');
-        // Optional: Additional logic after failed save
+        
       }
     } 
     else {
       console.log('Please fix the validation errors before submitting.');
-      // Optional: Additional logic after validation errors
+     
     }
   }
 

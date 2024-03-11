@@ -8,13 +8,9 @@ import { Bulletin } from '../bulletin'
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class ChangeDetectComponent implements OnInit {
-  // bulletin!: Bulletin;
   @Input() bulletin!: Bulletin;
-
-  constructor(private cdr: ChangeDetectorRef) {}
-
-
-  ngOnInit(): void {
+ constructor(private cdr: ChangeDetectorRef) {}
+ ngOnInit(): void {
     const specificDate = new Date();
     this.bulletin = new Bulletin('Angular News', specificDate.toISOString());
 
@@ -41,8 +37,6 @@ changeDetectionOnPush() {
 
 
   changeDetectionDefault() {
-    // No need to manually trigger change detection for Default strategy
-    // Angular will automatically detect changes
     this.bulletin.news_title = 'Angular News';
   }
 }

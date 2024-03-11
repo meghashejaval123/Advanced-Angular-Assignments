@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class BulletinService {
-  // Replace this with actual bulletin news
+
   private bulletinNews: string[] = 
   ['Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.',
    'Angular is a TypeScript-based, free and open-source single-page web application framework led by the Angular Team', 

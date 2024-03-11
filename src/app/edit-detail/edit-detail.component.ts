@@ -11,14 +11,13 @@ import { UserOperationService } from '../user-operation.service';
 export class EditDetailComponent implements OnInit {
 
   userId!: number;
-  user: any = {}; // Initialize user object
-  constructor(private route: ActivatedRoute, private userService: UserService, private router: Router,private  useropservice:UserOperationService) {}
+  user: any = {};
+  constructor(private route: ActivatedRoute, private userService: UserService, private router: Router, private useropservice: UserOperationService) { }
 
   ngOnInit(): void {
-      this.route.params.subscribe((params) => {
+    this.route.params.subscribe((params) => {
       const userIdParam = params['id'];
       if (userIdParam && !isNaN(userIdParam)) {
-        // Check if userIdParam is not undefined and is a valid number
         this.userId = +userIdParam;
         this.useropservice.getUserDetails(this.userId).subscribe(
           (response: any) => {
@@ -31,18 +30,17 @@ export class EditDetailComponent implements OnInit {
         );
       } else {
         console.error('Invalid userId parameter:', userIdParam);
-        // Handle the case where userId is invalid (e.g., redirect, show an error message, etc.)
       }
     });
 
   }
 
-    updateUser(): void {
+  updateUser(): void {
     this.useropservice.updateUser(this.user).subscribe(
       (response) => {
         console.log('User updated successfully:', response);
         alert('User updated successfully!');
-        this.router.navigate(['/user-listing']); // Navigate back to user listing view
+        this.router.navigate(['/user-listing']);
       },
       (error) => {
         console.error('Error updating user:', error);

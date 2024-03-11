@@ -11,7 +11,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 export class ChipsComponent implements OnInit {
   chipControl = new FormControl();
   allChips: string[] = ['Angular', 'React', 'Vue', 'Node.js', 'Express', 'MongoDB'];
-  separatorKeysCodes: number[] = [13, 188]; // Assuming you want to use Enter (13) and Comma (188) as separator codes
+  separatorKeysCodes: number[] = [13, 188];
 
   selectedChips: string[] = [];
 
@@ -20,27 +20,19 @@ export class ChipsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // addChip(event: MatAutocompleteSelectedEvent): void {
-  //   const value = event.option.viewValue;
-  //   if (!this.selectedChips.includes(value)) {
-  //     this.selectedChips.push(value);
-  //     this.chipControl.setValue(null);
-  //   }
-  // }
+
 
   addChip(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
     if (value) {
-      // Add your chip handling logic here
-      // For example, add it to the list of selected chips
       this.selectedChips.push(value);
     }
 
     // Clear the input
     event.chipInput!.clear();
   }
-  // ... rest of the component code
+
 
 
   removeChip(chip: string): void {

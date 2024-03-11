@@ -21,24 +21,23 @@ export class RegistrationFormComponent {
     });
   }
 
-    onSubmit(): void {
+  onSubmit(): void {
     if (this.registrationForm.valid) {
       const email = this.registrationForm.get('email')!.value;
       const password = this.registrationForm.get('password')!.value;
 
       this.registrationService.registerUser(email, password).subscribe(
         (response) => {
-          // Handle successful registration
+
           if (response.token) {
-            // Save the token to localStorage
             console.log(response);
             localStorage.setItem('token', response.token);
             const token = localStorage.getItem('token');
-            
+
           }
         },
         (error) => {
-          // Handle registration error
+
           console.error('Registration failed:', error);
         }
       );

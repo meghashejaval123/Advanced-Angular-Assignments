@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  opened = false; // Initially, the sidenav is closed
+  opened = false;
 
   toggleSidenav(): void {
     this.opened = !this.opened;

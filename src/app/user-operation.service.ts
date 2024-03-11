@@ -15,7 +15,6 @@ export class UserOperationService {
   }
 
   updateUser(user: any): Observable<any> {
-    // Assuming your API supports a PUT request for updating users
     return this.http.put(`${this.apiUrl}/${user.id}`, user);
   }
 

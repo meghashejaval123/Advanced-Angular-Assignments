@@ -1,35 +1,35 @@
 
 .mat-elevation-z8 {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow to the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   table {
-    width: 50%; /* Make the table fill its container */
-    border-collapse: collapse; /* Remove spacing between table cells */
+    width: 50%; 
+    border-collapse: collapse; 
   }
   
   th, td {
-    padding: 12px; /* Add padding to header and cell content */
-    text-align: left; /* Align text to the left within cells */
+    padding: 12px;
+    text-align: left; 
   }
   
   th {
-    background-color: #f2f2f2; /* Set a background color for header cells */
+    background-color: #f2f2f2; 
   }
   
   td {
-    border-bottom: 1px solid #ddd; /* Add a bottom border to cells for separation */
+    border-bottom: 1px solid #ddd;
   }
   
   .mat-row:hover {
-    background-color: #f5f5f5; /* Change background color on hover for rows */
+    background-color: #f5f5f5; 
   }
   
   .mat-header-cell.mat-sort-header {
-    cursor: pointer; /* Add pointer cursor to sortable headers */
+    cursor: pointer; 
   }
   
   .mat-sort-header-arrow {
-    color: #555; /* Change color of sort arrow */
+    color: #555; 
   }
   

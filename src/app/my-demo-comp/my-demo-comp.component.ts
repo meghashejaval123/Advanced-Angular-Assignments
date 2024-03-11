@@ -12,7 +12,7 @@ import { LoaderDialogComponent } from '../loader-dialog/loader-dialog.component'
   styleUrls: ['./my-demo-comp.component.css']
 })
 export class MyDemoCompComponent {
-  constructor(private dialog: MatDialog, private snackBar: MatSnackBar) {}
+  constructor(private dialog: MatDialog, private snackBar: MatSnackBar) { }
 
   showAlert() {
     alert('This is a well-formatted alert!');
@@ -36,7 +36,7 @@ export class MyDemoCompComponent {
     }, 3000);
   }
 
-  
+
   showConfirm() {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: {
@@ -46,10 +46,8 @@ export class MyDemoCompComponent {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result === 'confirm') {
-        // Handle confirm action
         console.log('User clicked on Okay');
       } else {
-        // Handle cancel action
         console.log('User clicked on Cancel');
       }
     });
@@ -64,10 +62,10 @@ export class MyDemoCompComponent {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        // Handle confirm action with comment
+
         console.log('User clicked on Okay with comment:', result);
       } else {
-        // Handle cancel action
+
         console.log('User clicked on Cancel');
       }
     });

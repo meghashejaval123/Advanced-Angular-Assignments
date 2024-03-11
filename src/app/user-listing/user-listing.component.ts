@@ -24,29 +24,17 @@ export class UserListingComponent implements OnInit {
     );
   }
 
-  // View Option click then user component is open logic 
   viewDetails(userId: number): void {
-    // Implement the logic to view user details based on the user ID
     console.log(`View details for user with ID: ${userId}`);
     this.router.navigate(['/user-detail', userId]);
   }
 
 
-  // viewDetails(userId: number): void {
-  //   // Ensure that userId is a valid number before navigating
-  //   if (!isNaN(userId)) {
-  //     // Navigate to the UserDetail component with the user ID as a parameter
-  //     this.router.navigate(['/user-detail', userId]);
-  //   } else {
-  //     console.error('Invalid userId:', userId);
-  //     // Handle the case where userId is not a valid number
-  //   }
-  // }
+
 
 
 // In edit option click then edit component open logic
   editUser(userId: number): void {
-    // Implement the logic to edit user details based on the user ID
     console.log(`Edit user with ID: ${userId}`);
     this.router.navigate(['/edit-detail', userId]);
   }
@@ -61,7 +49,6 @@ export class UserListingComponent implements OnInit {
       // Call delete API and handle success/failure
       this.useropservice.deleteUser(userId).subscribe(
         () => {
-          // Remove the deleted user from the local user list
           this.users = this.users.filter(user => user.id !== userId);
           alert('User deleted successfully!');
         },

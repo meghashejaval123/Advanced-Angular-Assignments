@@ -1,23 +1,17 @@
-
-
 <button mat-button (click)="addRow()">Add Row</button>
 <button mat-button (click)="removeRow()">Remove Row</button>
 <button mat-button (click)="shuffleRows()">Shuffle Rows</button>
 
-<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
-    <table *ngIf="dataSource && dataSource.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table *ngIf="dataSource && dataSource.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
 
-  <!-- Column definitions -->
   <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
     <th mat-header-cell *matHeaderCellDef>{{ col | titlecase }}</th>
     <td mat-cell *matCellDef="let element">{{ element[col] }}</td>
   </ng-container>
 
-  <!-- Header Row -->
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 
-  <!-- Data Rows -->
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
 </table>

@@ -1,12 +1,11 @@
-/* my-dialog.component.css */
+
 h1.mat-dialog-title {
-    color: #2196F3; /* Set title color */
+    color: #2196F3; 
   }
   
   div.mat-dialog-content {
-    font-size: 16px; /* Set content font size */
-    color: #555; /* Set content text color */
+    font-size: 16px; 
+    color: #555; 
   }
   
-  /* Optionally, you can add more styles for different elements as needed */
   

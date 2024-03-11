@@ -1,27 +1,27 @@
-/* chips.component.css */
+
 .mat-form-field {
-    width: 30%; /* Set the width of the form field */
+    width: 30%; 
   }
   
   .mat-chip {
-    margin: 4px; /* Add margin between chips */
+    margin: 4px; 
   }
   
   input.mat-input-element {
-    width: 30%; /* Make the input element fill the available space */
+    width: 30%; 
   }
   
   .mat-chip-list {
     display: flex;
-    flex-wrap: wrap; /* Make the chip list wrap to the next line if needed */
+    flex-wrap: wrap; 
   }
   
   .mat-chip-remove mat-icon {
-    cursor: pointer; /* Add pointer cursor to the chip remove icon */
-    color: #ff3333; /* Set the color of the chip remove icon */
+    cursor: pointer; 
+    color: #ff3333; 
   }
   
   .mat-chip-remove mat-icon:hover {
-    color: #cc0000; /* Change the color of the chip remove icon on hover */
+    color: #cc0000; 
   }
   

@@ -7,10 +7,6 @@ import { BasicTableComponent } from './basic-table/basic-table.component';
 import { DynamicTableComponent } from './dynamic-table/dynamic-table.component';
 import { ExpandableTableComponent } from './expandable-table/expandable-table.component';
 
-// const routes: Routes = [
-//   { path: 'user-detail/:id', component: UserDetailComponent },
-
-// ];
 
 const routes: Routes = [
     { path: 'user-listing', component: UserListingComponent },

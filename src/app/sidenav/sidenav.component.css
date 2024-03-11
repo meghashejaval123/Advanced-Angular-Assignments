@@ -1,26 +1,26 @@
-/* sidenav.component.css */
+
 .sidenav-container {
     height: 100%;
   }
   
   mat-sidenav {
-    width: 200px; /* Set the width of the sidenav */
+    width: 200px;
   }
   
   mat-sidenav-content {
-    padding: 16px; /* Add padding to the main content */
+    padding: 16px; 
   }
   
   mat-nav-list a {
-    text-decoration: none; /* Remove underline from the links */
-    color: #333; /* Set the color of the links */
+    text-decoration: none; 
+    color: #333; 
   }
   
   mat-nav-list a:hover {
-    background-color:pink; /* Change background color on hover for links */
+    background-color:pink; 
   }
   
   mat-icon {
-    margin-right: 8px; /* Add margin to the right of the menu icon */
+    margin-right: 8px;
   }
   

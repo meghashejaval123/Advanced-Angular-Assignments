@@ -10,6 +10,6 @@ export class ImageListComponent {
     { title: 'Image 1', imageUrl: 'https://placekitten.com/100/100' },
     { title: 'Image 2', imageUrl: 'https://placekitten.com/101/100' },
     { title: 'Image 3', imageUrl: 'https://placekitten.com/102/100' },
-    // Add more images as needed
+    
   ];
 }

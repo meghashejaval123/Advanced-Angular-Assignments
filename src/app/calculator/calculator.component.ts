@@ -37,7 +37,6 @@ export class CalculatorComponent implements OnInit {
       }
     } catch (error) {
       this.result = undefined;
-      // console.error(error.message);
     }
   }
 

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChangeDetectComponent } from './change-detect/change-detect.component';
@@ -37,7 +36,6 @@ import { SortingTableComponent } from './sorting-table/sorting-table.component';
 import { ChipsComponent } from './chips/chips.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatStepperModule } from '@angular/material/stepper';
-// import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';

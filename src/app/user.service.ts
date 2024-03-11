@@ -13,7 +13,6 @@ export class UserService {
 
   getUsers(): Observable<any> {
     return this.http.get(this.apiUrl);
-    // return this.http.get(`${this.apiUrl}?per_page=10`);
   }
 
  

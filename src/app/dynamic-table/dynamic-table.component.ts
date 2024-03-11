@@ -9,33 +9,27 @@ export class DynamicTableComponent implements OnInit {
   dataSource = [
     { position: 1, name: 'John Doe', age: 30 },
     { position: 2, name: 'Jane Doe', age: 25 },
-    // Add more initial data as needed
+
   ];
   displayedColumns: string[] = ['position', 'name', 'age'];
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
-  // addRow() {
-  //   const newPosition = this.dataSource.length + 1;
-  //   const newName = `New Person ${newPosition}`;
-  //   const newAge = Math.floor(Math.random() * 50) + 20; // Random age between 20 and 70
 
-  //   this.dataSource.push({ position: newPosition, name: newName, age: newAge });
-  // }
 
 
   addRow() {
     console.log('Before Adding Row:', this.dataSource);
-    
+
     const newPosition = this.dataSource.length + 1;
     const newName = `New Person ${newPosition}`;
     const newAge = Math.floor(Math.random() * 50) + 20;
-  
+
     this.dataSource.push({ position: newPosition, name: newName, age: newAge });
-  
+
     console.log('After Adding Row:', this.dataSource);
-    this.cdr.detectChanges(); 
+    this.cdr.detectChanges();
   }
 
 
@@ -48,7 +42,8 @@ export class DynamicTableComponent implements OnInit {
   shuffleRows() {
     console.log('Before Shuffling:', this.dataSource);
     this.dataSource = this.shuffleArray(this.dataSource);
-    console.log('After Shuffling:', this.dataSource);  }
+    console.log('After Shuffling:', this.dataSource);
+  }
 
   // Helper function to shuffle an array
   private shuffleArray(array: any[]) {
@@ -64,6 +59,6 @@ export class DynamicTableComponent implements OnInit {
 
     return array;
   }
- 
+
 
 }

@@ -14,7 +14,6 @@ export class AutocompleteComponent  {
   options: { group: string; values: string[] }[] = [
     { group: 'Group 1', values: ['One', 'Two', 'Three'] },
     { group: 'Group 2', values: ['Four', 'Five', 'Six'] },
-    // Add more groups as needed
   ];
   filteredOptions: Observable<{ group: string; values: string[] }[]>;
 
@@ -36,7 +35,6 @@ export class AutocompleteComponent  {
       values: group.values.filter((option) => option.toLowerCase().includes(filterValue)),
     }));
 
-    // Log the selected option to the console
     this.myControl.valueChanges.subscribe((selectedOption) => {
       console.log('Selected Option:', selectedOption);
     });

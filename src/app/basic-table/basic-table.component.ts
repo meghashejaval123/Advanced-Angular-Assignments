@@ -12,7 +12,7 @@ export class BasicTableComponent implements OnInit {
     { position: 3, name: 'Jane Doe', age: 25 },
     { position: 4, name: 'Jane Doe', age: 25 },
     { position: 5, name: 'Jane Doe', age: 25 },
-    // Add more data as needed
+    
   ];
 
   displayedColumns: string[] = ['position', 'name', 'age'];

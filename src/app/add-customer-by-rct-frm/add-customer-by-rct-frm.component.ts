@@ -61,7 +61,6 @@ export class AddCustomerByRctFrmComponent implements OnInit {
     // Function to handle form submission
     onSubmit() {
       if (this.myForm.valid) {
-        // Process the form data
         alert('Form submitted successfully!');
         console.log(this.myForm.value);
       }

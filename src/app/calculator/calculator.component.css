@@ -34,63 +34,62 @@ div {
   }
   
 
-  /* Apply styles to the parent div */
+ 
 div {
-  margin-bottom: 15px; /* Add some margin for spacing */
+  margin-bottom: 15px; 
 }
 
-/* Style the label */
+
 label {
-  display: block; /* Make it a block element to occupy full width */
-  margin-bottom: 5px; /* Add some space below the label */
+  display: block;
+  margin-bottom: 5px; 
 }
 
-/* Style the select dropdown */
+
 select {
-  width: 30%; /* Make it fill the entire width of the parent div */
-  padding: 8px; /* Add some padding for better appearance */
-  font-size: 14px; /* Adjust font size */
-  border: 1px solid #ccc; /* Add a border for clarity */
-  border-radius: 4px; /* Add rounded corners */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: 30%; 
+  padding: 8px;
+  font-size: 14px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
 }
 
-/* Style the options within the select dropdown */
+
 option {
-  font-size: 14px; /* Adjust font size */
+  font-size: 14px; 
 }
 
-/* Optional: Style selected option differently */
+
 select:focus {
-  outline: none; /* Remove the default focus outline */
-  border-color: #007bff; /* Change border color on focus */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+  outline: none; 
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
-/* Apply styles to the parent divs */
+
 div {
-  margin-bottom: 15px; /* Add some margin for spacing between divs */
+  margin-bottom: 15px; 
 }
 
-/* Style the labels */
+
 label {
-  display: block; /* Make it a block element to occupy full width */
-  margin-bottom: 5px; /* Add some space below the label */
+  display: block; 
+  margin-bottom: 5px; 
 }
 
-/* Style the input fields */
 input {
-  width: 30%; /* Make it fill the entire width of the parent div */
-  padding: 8px; /* Add some padding for better appearance */
-  font-size: 14px; /* Adjust font size */
-  border: 1px solid #ccc; /* Add a border for clarity */
-  border-radius: 4px; /* Add rounded corners */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: 30%; 
+  padding: 8px; 
+  font-size: 14px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
 }
 
-/* Optional: Style the input fields on focus */
+
 input:focus {
-  outline: none; /* Remove the default focus outline */
-  border-color: #007bff; /* Change border color on focus */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+  outline: none;
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }

@@ -29,8 +29,7 @@ export class LiveNewsComponent implements OnInit, OnDestroy {
   private loadBulletinNews(): void {
     this.bulletinSubscription = timer(0, 5000).subscribe(() => {
       this.bulletinService.getBulletinNews().subscribe(news => {
-        // Assuming news is an array of bulletin news
-        if (news.length > 0) {
+         if (news.length > 0) {
           const randomIndex = Math.floor(Math.random() * news.length);
           this.bulletin = news[randomIndex];
         }

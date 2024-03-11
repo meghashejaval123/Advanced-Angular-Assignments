@@ -12,10 +12,10 @@ export interface Element {
   description: string;
 }
 const ELEMENT_DATA: Element[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', description: 'Hydrogen is a chemical element with symbol H and atomic number 1.'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', description: 'Helium is a chemical element with symbol He and atomic number 2.'},
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'M', description: 'Hydrogen is a chemical element with symbol H and atomic number 1.'},
-  {position: 2, name: 'Helium', weight: 5.0987, symbol: 'MS', description: 'Helium is a chemical element with symbol He and atomic number 2.'},
+  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', description: 'Hydrogen is a chemical element with symbol H and atomic number 1.' },
+  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', description: 'Helium is a chemical element with symbol He and atomic number 2.' },
+  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'M', description: 'Hydrogen is a chemical element with symbol H and atomic number 1.' },
+  { position: 2, name: 'Helium', weight: 5.0987, symbol: 'MS', description: 'Helium is a chemical element with symbol He and atomic number 2.' },
 
 ];
 
@@ -52,25 +52,16 @@ export class ExpandableTableComponent implements OnInit {
     };
   }
 
-  // applyFilter(filterValue: string) {
-  //   filterValue = filterValue.trim().toLowerCase();
-  //   this.dataSource.filter = filterValue;
-  // }
 
   applyFilter(event: any) {
     const filterValue = (event?.target?.value || '').trim().toLowerCase();
     this.dataSource.filter = filterValue;
   }
-  
+
 
   toggleRow(element: Element) {
     this.expandedElement = this.expandedElement === element ? null : element;
   }
 
-  // isFilterApplied(): boolean {
-  //   const filterStatus = this.isFilterApplied();
-  //   console.log('Filter applied:', filterStatus);
-  //   return !this.dataSource.filter;
-    
-  // }
+
 }

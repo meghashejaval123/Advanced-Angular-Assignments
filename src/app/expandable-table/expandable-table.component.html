@@ -1,4 +1,3 @@
-
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" matSort class="example-table">
 
@@ -6,7 +5,6 @@
       <input matInput (input)="applyFilter($event)" placeholder="Filter">
     </mat-form-field>
 
-    <!-- Expandable row -->
     <ng-container matColumnDef="expandedDetail">
       <mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
         <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
@@ -17,40 +15,32 @@
       </mat-cell>
     </ng-container>
 
-    <!-- Position Column -->
     <ng-container matColumnDef="position">
       <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
     </ng-container>
 
-    <!-- Name Column -->
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
     </ng-container>
 
-    <!-- Weight Column -->
     <ng-container matColumnDef="weight">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Weight </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
     </ng-container>
 
-    <!-- Symbol Column -->
     <ng-container matColumnDef="symbol">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"
-            class="example-element-row"
-            [class.example-expanded-row]="expandedElement === row"
-            (click)="toggleRow(row)">
+    <mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row"
+      [class.example-expanded-row]="expandedElement === row" (click)="toggleRow(row)">
     </mat-row>
-    <!-- Example in the template -->
 
 
   </mat-table>
 
-  <!-- <div *ngIf="isFilterApplied()">Filter is applied!</div> -->
 </div>
