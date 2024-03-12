@@ -1,0 +1,35 @@
+
+
+<div class="container mt-5">
+    <h2>Registration Form</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" formControlName="email" required>
+        <div *ngIf="registrationForm.get('email')?.hasError('required') && registrationForm.get('email')?.touched" class="invalid-feedback">
+          Email is required.
+        </div>
+        <div *ngIf="registrationForm.get('email')?.hasError('email') && registrationForm.get('email')?.touched" class="invalid-feedback">
+          Please enter a valid email address.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password" required>
+        <div *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched" class="invalid-feedback">
+          Password is required.
+        </div>
+        <div *ngIf="registrationForm.get('password')?.hasError('minlength') && registrationForm.get('password')?.touched" class="invalid-feedback">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+    <br>
+      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Register</button>
+    </form>
+  </div>
+  
+
+
+ 
+  

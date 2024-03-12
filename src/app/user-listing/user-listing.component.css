@@ -1,0 +1,56 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #007bff;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .action-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .action-icon {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 5px;
+    color: #28a745;
+  }
+  
+  .action-icon:hover {
+    color: #218838;
+  }
+  
+  .action-icon.edit {
+    color: #007bff;
+  }
+  
+  .action-icon.edit:hover {
+    color: #0056b3;
+  }
+  
+  .action-icon.delete {
+    color: #dc3545;
+  }
+  
+  .action-icon.delete:hover {
+    color: #bd2130;
+  }
+  

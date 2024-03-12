@@ -1,0 +1,15 @@
+<div *ngIf="user">
+    <h2>Edit User Details</h2>
+    <form (submit)="updateUser()">
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="user.email" [ngModelOptions]="{ standalone: true }">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" [(ngModel)]="user.first_name" [ngModelOptions]="{ standalone: true }" />
+  
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" [(ngModel)]="user.last_name" [ngModelOptions]="{ standalone: true }" />
+  
+  
+      <button type="submit">Update</button>
+    </form>
+  </div>

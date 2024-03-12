@@ -1,0 +1,13 @@
+button.mat-button {
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px; 
+  }
+  
+  button.mat-button:hover {
+    background-color: #45a049; 
+  }
