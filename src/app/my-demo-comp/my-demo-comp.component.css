@@ -1,0 +1,21 @@
+button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .transparent {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  
+  

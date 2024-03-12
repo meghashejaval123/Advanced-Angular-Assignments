@@ -1,0 +1,43 @@
+import { Injectable } from '@angular/core';
+import { HttpRequest, HttpHandler, HttpEvent, HttpHeaders, HttpInterceptor } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthInterceptorService implements HttpInterceptor{
+
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    const isRegistrationApi = request.url.includes('register');
+
+    if (!isRegistrationApi) {
+    
+      const token = localStorage.getItem('token');
+      if (token) {
+
+        request = request.clone({
+          setHeaders: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+      }
+    }
+  console.log('Request URL:', request.url);
+  console.log('Request Headers:', this.headersToObject(request.headers));
+
+ 
+    return next.handle(request);
+  }
+
+  
+  private headersToObject(headers: HttpHeaders): any {
+    const headersObject: any = {};
+    headers.keys().forEach(key => {
+      headersObject[key] = headers.getAll(key);
+    });
+    return headersObject;
+  }
+}

@@ -1,0 +1,26 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search" (input)="applyFilter()" />
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let item of filteredData; let i = index">
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+      </tr>
+      <tr *ngIf="item['expanded']">
+        <td colspan="2">Details: Hi Check  Your details </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button (click)="toggleRow(i)">{{ item['expanded'] ? 'Collapse' : 'Expand' }}</button>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

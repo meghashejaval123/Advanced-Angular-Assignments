@@ -1,0 +1,16 @@
+
+   <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="optionSelected($event)">
+      <ng-container *ngFor="let group of filteredOptions | async">
+        <mat-optgroup *ngIf="group.options.length > 0" [label]="group.name">
+          <mat-option *ngFor="let option of group.options" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-optgroup>
+      </ng-container>
+    </mat-autocomplete>
+  </mat-form-field>
+  
+  
+
